@@ -46,6 +46,8 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "faker"
 end
 
 group :development do
@@ -55,3 +57,8 @@ group :development do
   gem "amazing_print"
 end
 
+group :test do
+  gem "vcr"
+  gem "webmock"
+  gem "simplecov"
+end

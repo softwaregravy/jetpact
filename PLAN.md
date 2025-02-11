@@ -4,10 +4,9 @@
 
 ### Project Initialization
 - [x] Create new Rails 7 project with PostgreSQL
-- [ ] Add RSpec for testing
-- [ ] Add SimpleCov, VCR, and Faker gems
+- [x] Add RSpec for testing
+- [x] Add SimpleCov, VCR, and Faker gems
 - [ ] Configure RuboCop and Prettier
-- [ ] Add test directory structure
 - [ ] Create first passing test
 - [ ] Success Criteria: Server returns "Hello World" on / with passing test
 
