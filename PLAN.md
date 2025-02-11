@@ -7,8 +7,8 @@
 - [x] Add RSpec for testing
 - [x] Add SimpleCov, VCR, and Faker gems
 - [ ] Configure RuboCop and Prettier
-- [ ] Create first passing test
-- [ ] Success Criteria: Server returns "Hello World" on / with passing test
+- [x] Create first passing test
+- [x] Success Criteria: Server returns "Hello World" on / with passing test
 
 ### Database Setup
 - [ ] Configure PostgreSQL connection
