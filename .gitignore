@@ -103,6 +103,7 @@ node_modules/
 /public/packs
 /public/packs-test
 /public/assets
+/app/assets/builds/
 
 # Ignore yarn files
 /yarn-error.log
