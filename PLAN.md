@@ -27,11 +27,11 @@
 ## Phase 2: Development Environment
 
 ### Heroku Setup
-- [ ] Create Heroku account
-- [ ] Set up staging environment
-- [ ] Configure PostgreSQL on Heroku
+- [x] Create Heroku account
+- [x] Set up staging environment
+- [x] Configure PostgreSQL on Heroku
 - [x] Set up CI/CD pipeline
-- [ ] Success Criteria: Automated deploys on main branch merge
+- [x] Success Criteria: Automated deploys on main branch merge
 
 ### Shopify Development Stores
 - [ ] Create Spree development store
