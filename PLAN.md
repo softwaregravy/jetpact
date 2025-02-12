@@ -43,12 +43,12 @@
 
 ### Data Models
 - [x] Implement ProductMap model
-- [ ] Implement OrderSync model
-- [ ] Add model relationships and validations
-- [ ] Create migrations
-- [ ] Add FactoryBot factories for each model
-- [ ] Add model specs
-- [ ] Success Criteria: All models created with passing specs
+- [x] Implement OrderSync model
+- [x] Add model relationships and validations
+- [x] Create migrations
+- [x] Add FactoryBot factories for each model
+- [x] Add model specs
+- [x] Success Criteria: All models created with passing specs
 
 ### Shopify Integration
 - [ ] Add shopify_api gem

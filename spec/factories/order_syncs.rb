@@ -6,23 +6,27 @@
 #  error_message             :string
 #  last_attempted_at         :datetime
 #  last_order_failure_reason :string
-#  partner_shop_domain       :string           not null
 #  retry_count               :integer          default(0), not null
 #  status                    :string           not null
 #  created_at                :datetime         not null
 #  updated_at                :datetime         not null
 #  partner_order_id          :string
+#  partner_store_id          :bigint           not null
 #  primary_shop_order_id     :string           not null
 #
 # Indexes
 #
-#  index_order_syncs_on_partner_shop_domain    (partner_shop_domain)
+#  index_order_syncs_on_partner_store_id       (partner_store_id)
 #  index_order_syncs_on_primary_shop_order_id  (primary_shop_order_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (partner_store_id => partner_stores.id)
 #
 FactoryBot.define do
   factory :order_sync do
+    association :partner_store
     primary_shop_order_id { rand(10000000..99999999).to_s }
-    partner_shop_domain { "#{Faker::Internet.domain_word}.myshopify.com" }
     partner_order_id { rand(10000000..99999999).to_s }
     status { %w[pending ready_for_sync synced failed].sample }
     error_message { nil }

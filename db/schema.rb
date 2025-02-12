@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_02_12_191403) do
+ActiveRecord::Schema[7.2].define(version: 2025_02_12_192947) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -105,7 +105,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_12_191403) do
 
   create_table "order_syncs", force: :cascade do |t|
     t.string "primary_shop_order_id", null: false
-    t.string "partner_shop_domain", null: false
     t.string "partner_order_id"
     t.string "status", null: false
     t.string "error_message"
@@ -114,7 +113,8 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_12_191403) do
     t.datetime "last_attempted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["partner_shop_domain"], name: "index_order_syncs_on_partner_shop_domain"
+    t.bigint "partner_store_id", null: false
+    t.index ["partner_store_id"], name: "index_order_syncs_on_partner_store_id"
     t.index ["primary_shop_order_id"], name: "index_order_syncs_on_primary_shop_order_id"
   end
 
@@ -130,14 +130,17 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_12_191403) do
 
   create_table "product_maps", force: :cascade do |t|
     t.string "primary_shop_product_id", null: false
-    t.string "partner_shop_domain", null: false
     t.string "partner_product_id", null: false
     t.string "primary_shop_variant_id", null: false
     t.string "partner_variant_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "partner_store_id", null: false
     t.index ["partner_product_id"], name: "index_product_maps_on_partner_product_id"
-    t.index ["partner_shop_domain"], name: "index_product_maps_on_partner_shop_domain"
+    t.index ["partner_store_id"], name: "index_product_maps_on_partner_store_id"
     t.index ["primary_shop_product_id"], name: "index_product_maps_on_primary_shop_product_id"
   end
+
+  add_foreign_key "order_syncs", "partner_stores"
+  add_foreign_key "product_maps", "partner_stores"
 end

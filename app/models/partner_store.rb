@@ -15,4 +15,6 @@
 #  index_partner_stores_on_shop_domain  (shop_domain) UNIQUE
 #
 class PartnerStore < ApplicationRecord
+  has_many :order_syncs, dependent: :destroy
+  has_many :product_maps, dependent: :destroy
 end
