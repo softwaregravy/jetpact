@@ -16,7 +16,7 @@
 #
 FactoryBot.define do
   factory :partner_store do
-    shop_domain { "#{Faker::Movie.title.dasherize}.myshopify.com" }
+    shop_domain { "#{Faker::Internet.domain_word}.myshopify.com" }
     access_token { SecureRandom.alphanumeric(32) }
     status { "PENDING" }
   end

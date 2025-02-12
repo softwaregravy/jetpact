@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_02_12_021825) do
+ActiveRecord::Schema[7.2].define(version: 2025_02_12_185957) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -111,5 +111,18 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_12_021825) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["shop_domain"], name: "index_partner_stores_on_shop_domain", unique: true
+  end
+
+  create_table "product_maps", force: :cascade do |t|
+    t.string "primary_shop_product_id", null: false
+    t.string "partner_shop_domain", null: false
+    t.string "partner_product_id", null: false
+    t.string "primary_shop_variant_id", null: false
+    t.string "partner_variant_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["partner_product_id"], name: "index_product_maps_on_partner_product_id"
+    t.index ["partner_shop_domain"], name: "index_product_maps_on_partner_shop_domain"
+    t.index ["primary_shop_product_id"], name: "index_product_maps_on_primary_shop_product_id"
   end
 end

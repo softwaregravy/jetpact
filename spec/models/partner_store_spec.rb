@@ -19,7 +19,7 @@ require 'rails_helper'
 RSpec.describe PartnerStore, type: :model do
   it "has a valid factory" do
     expect {
-    create(:partner_store)
+      create(:partner_store)
     }.to change(PartnerStore, :count).by(1)
   end
 end
