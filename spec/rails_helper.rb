@@ -75,5 +75,18 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+  # From FactoryBot
   config.include FactoryBot::Syntax::Methods
+
+  # From GoodJob
+  config.before(:each, type: :job) do
+    GoodJob.active_record_parent_class = ActiveRecord::Base
+    GoodJob.preserve_job_records = true
+    ActiveJob::Base.queue_adapter = :test
+  end
+
+  config.after(:each, type: :job) do
+    GoodJob.preserve_job_records = false
+  end
+
 end
