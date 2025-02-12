@@ -1,8 +1,7 @@
 name: CI
 
 defaults:
-  run: 
-    timeout-minutes: 15
+  timeout-minutes: 15
 
 on:
   pull_request:
