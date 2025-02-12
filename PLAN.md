@@ -19,10 +19,10 @@
 - [x] Success Criteria: Test connects to DB and creates/reads a PartnerStore
 
 ### Queue Setup
-- [ ] Configure GoodJob
-- [ ] Create sample background job
-- [ ] Write job specs
-- [ ] Success Criteria: Job processed and logged
+- [x] Configure GoodJob
+- [x] Create sample background job
+- [x] Write job specs
+- [x] Success Criteria: Job processed and logged
 
 ## Phase 2: Development Environment
 
