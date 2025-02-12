@@ -30,7 +30,7 @@
 - [ ] Create Heroku account
 - [ ] Set up staging environment
 - [ ] Configure PostgreSQL on Heroku
-- [ ] Set up CI/CD pipeline
+- [x] Set up CI/CD pipeline
 - [ ] Success Criteria: Automated deploys on main branch merge
 
 ### Shopify Development Stores
@@ -116,3 +116,4 @@
 
 ## Followups
 - [ ] will PartnerStores#access_token initially be false? I'd like to add a not null constraint in the db
+- [x] Need a procfile for heroku
