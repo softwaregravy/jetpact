@@ -34,10 +34,10 @@
 - [x] Success Criteria: Automated deploys on main branch merge
 
 ### Shopify Development Stores
-- [ ] Create Spree development store
-- [ ] Create two partner development stores
-- [ ] Configure basic products in partner stores
-- [ ] Success Criteria: All stores accessible and configured
+- [x] Create Spree development store
+- [x] Create two partner development stores
+- [x] Configure basic products in partner stores
+- [x] Success Criteria: All stores accessible and configured
 
 ## Phase 3: Core Implementation
 
