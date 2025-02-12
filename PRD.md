@@ -4,13 +4,13 @@
 ### 1. Overview & Objectives
 
 - **Product:** PowerPact, a Shopify embedded app developed by Pact.
-- **Purpose:** Enable partner stores to become drop-ship providers for Bubbly, Pact's Shopify storefront.
-- **Key Functionality:** Bubbly sells partner products, and PowerPact pushes relevant orders back to the original partner stores.
+- **Purpose:** Enable partner stores to become drop-ship providers for Spree, Pact's Shopify storefront.
+- **Key Functionality:** Spree sells partner products, and PowerPact pushes relevant orders back to the original partner stores.
 
 ### 2. Core Features & Requirements
 
 - **Embedded Shopify App:** Simplified authorization and UI within the Shopify admin.
-- **Order Syncing:** Orders from Bubbly are pushed to partner stores via background jobs.
+- **Order Syncing:** Orders from Spree are pushed to partner stores via background jobs.
 - **Partner Dashboard:** A simple UI showing a table of orders from the last 30 days.
 - **Manual Retry for Failed Orders:** Admins manually mark failed orders as "ready_for_sync" to retry syncing.
 
@@ -92,7 +92,7 @@ end
 
 #### Order Processing
 
-1. Customer places an order on Bubbly.
+1. Customer places an order on Spree.
 2. Shopify triggers `order_paid` or `order_risk_analyzed` webhook.
 3. PowerPact pulls the order details.
 4. Analysis determines readiness for syncing.
