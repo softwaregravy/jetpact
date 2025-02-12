@@ -88,5 +88,4 @@ RSpec.configure do |config|
   config.after(:each, type: :job) do
     GoodJob.preserve_job_records = false
   end
-
 end
