@@ -3,8 +3,8 @@ class CreateProductMaps < ActiveRecord::Migration[7.2]
     create_table :product_maps do |t|
       t.string :primary_shop_product_id, null: false
       t.string :partner_shop_domain, null: false
-      t.string :partner_product_id, null: false 
-      t.string :primary_shop_variant_id, null: false  
+      t.string :partner_product_id, null: false
+      t.string :primary_shop_variant_id, null: false
       t.string :partner_variant_id, null: false
 
       t.timestamps
