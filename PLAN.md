@@ -11,12 +11,12 @@
 - [x] Success Criteria: Server returns "Hello World" on / with passing test
 
 ### Database Setup
-- [ ] Configure PostgreSQL connection
-- [ ] Create initial migration for PartnerStore model
-- [ ] Set up database.yml for different environments
-- [ ] Add FactoryBot and first factory
-- [ ] Write basic model specs
-- [ ] Success Criteria: Test connects to DB and creates/reads a PartnerStore
+- [x] Configure PostgreSQL connection
+- [x] Create initial migration for PartnerStore model
+- [x] Set up database.yml for different environments
+- [x] Add FactoryBot and first factory
+- [x] Write basic model specs
+- [x] Success Criteria: Test connects to DB and creates/reads a PartnerStore
 
 ### Queue Setup
 - [ ] Configure GoodJob
@@ -113,3 +113,6 @@
 - System specs should use development stores
 - Use FactoryBot for test data
 - Use Faker for test data generation
+
+## Followups
+- [ ] will PartnerStores#access_token initially be false? I'd like to add a not null constraint in the db
